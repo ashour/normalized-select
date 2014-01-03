@@ -1,14 +1,18 @@
-.us-container {
+.ns-container {
   display: inline-block;
   position: relative;
   overflow: hidden;
   min-width: 4em;
   min-height: 1em;
   padding: 0.3em 1.4em 0.3em 0.5em;
+  margin-left: 0.5em;
   background-color: #eee;
 }
+.ns-container:first-child,
+.ns-container-first
+ { margin-left: 0; }
 
-.us-container label {
+.ns-container label {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -16,7 +20,7 @@
   margin: -1px; padding: 0; border: 0;
 }
 
-.us-container select {
+.ns-select {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -31,9 +35,9 @@
   border-radius: 0;
   -webkit-appearance: none;
 }
-.us-container select:focus { outline: none; }
+.ns-select:focus { outline: none; }
 
-.us-icon {
+.ns-icon {
   position: absolute;
   z-index: 1;
   top: 0.3em;

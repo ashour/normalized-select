@@ -1,0 +1,19 @@
+.ns-theme-elegant .ns-container {
+  padding-bottom: 0.5em;
+  background-color: #fafafa;
+  border-radius: 2px;
+  border: 1px solid #ededed;
+}
+.ns-theme-elegant .ns-container:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0px 1px 1px #f8f8f8, 1px 0px 1px #f8f8f8, -1px 0px 1px #f8f8f8;
+}
+.ns-theme-elegant .ns-select {
+  line-height: 1.25em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0299c4;
+}
+.ns-theme-elegant .ns-icon {
+  top: 0.4em;
+  color: #014a5f;
+}
