@@ -5,20 +5,21 @@ jQuery(function($) {
     icon:       'fa fa-chevron-down'
   };
 
-  // add the overlays and move the text and icon into them
+  // changes the overlay text based on the associated select option
+  var setOverlay = function (select) {
+    $('.'+classes.overlay, $(select).parent()).text($('option:selected', select).text());
+  };
+
+  // add the overlays and move the selected option text and icon into them
   // and ensure that the overlay text changes when an option is selected
   var $containers = $('.'+classes.container);
   $containers.each(function () {
-    var $this = $(this);
+    $(this).append(' <i class="'+classes.icon+'"></i>').
+            append('<div class="'+classes.overlay+'"></div>');
 
-    $this.append(' <i class="'+classes.icon+'"></i>');
-
-    $this.append('<div class="'+classes.overlay+'"></div>');
-    var overlay = $('.'+classes.overlay, this).text($('label', this).text());
-
-    $('select', this).change(function () {
-      var $this = $(this);
-      $('.'+classes.overlay, $this.parent()).text($('option:selected', this).text());
+    $('select', this).each(function () {
+      setOverlay(this);
+      $(this).change(function () { setOverlay(this); });
     });
   });
 }(jQuery));
