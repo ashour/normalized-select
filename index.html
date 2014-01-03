@@ -78,5 +78,23 @@
         <i class="fa fa-chevron-down ns-icon"></i>
       </div>
   </section><!--/#main-->
+
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script>
+    /**
+     * You can use the following snippet to remove the blue highlight on <select>s in IE.
+     * Note, however, that you are changing the default behaviour of the <select> element
+     * if you do this, and this can affect accessibility e.g. keyboard selection becomes
+     * impossible.
+     *
+     * If you still want to to do this, just include jQuery (uncomment the above <script>) and
+     * uncomment the following lines.
+     */
+    $(function () {
+      $('select').change(function () {
+        $(this).blur();
+      });
+    }());
+  </script>
 </body>
 </html>
