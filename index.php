@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Uniform &lt;select&gt; Dropdown</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="uniform-select.css">
   <script>document.documentElement.className += "js-enabled";</script>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <style>
     .us-month {
-      min-width: 6em;
+      min-width: 5em;
     }
   </style>
 </head>
@@ -30,6 +30,7 @@
             <option value="<?= $d ?>"><?= $d ?></option>
           <? endfor; ?>
         </select>
+        <i class="fa fa-chevron-down us-icon"></i>
       </div>
 
       <div class="us-container us-month">
@@ -40,6 +41,7 @@
             <option value="<?= $m ?>"><?= date("F", mktime(0, 0, 0, $m, 10)) ?></option>
           <? endfor; ?>
         </select>
+        <i class="fa fa-chevron-down us-icon"></i>
       </div>
 
       <input type="submit" value="Go">
@@ -47,9 +49,5 @@
 
     <? endif; ?>
   </section><!--/#main-->
-
-  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="uniform-select.js"></script>
-
 </body>
 </html>
