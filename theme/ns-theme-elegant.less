@@ -10,6 +10,7 @@
   }
   .ns-container:hover {
     background-color: darken(@containerBg, 0.75%);
+    border-color: darken(@containerBg, 7%);
     box-shadow: 0px 1px 1px darken(@containerBg, 0.75%),
                 1px 0px 1px darken(@containerBg, 0.75%),
                -1px 0px 1px darken(@containerBg, 0.75%);
@@ -26,3 +27,6 @@
     color: darken(@selectBg, 20%);
   }
 }
+
+// fix select offset in IE8
+.ie8 .ns-theme-elegant .ns-select { top: -0.2em; }
