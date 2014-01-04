@@ -17,6 +17,13 @@
     .ns-container-year  { min-width: 3em; }
     .ns-container-month { min-width: 6em; }
     .ns-container-day   { min-width: 2.5em; }
+    .ns-container label {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px; width: 1px;
+      margin: -1px; padding: 0; border: 0;
+    }
   </style>
   <link rel="stylesheet" href="ns-theme-elegant.css">
 </head>
@@ -25,7 +32,7 @@
     <h1>Normalized &lt;select&gt; Theme: Elegant</h1>
 
     <form action="" class="ns-theme-elegant">
-      <div class="ns-container ns-container-first ns-container-year">
+      <div class="ns-container ns-container-year">
         <label for="year">Year</label>
 
         <select class="ns-select" name="year" id="year">
@@ -133,5 +140,8 @@
       </div><!--/.ns-container-->
     </form>
   </section>
+
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="../normalized-select.js"></script>
 </body>
 </html>

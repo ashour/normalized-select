@@ -4,8 +4,9 @@
   border-radius: 2px;
   border: 1px solid #ededed;
 }
-.ns-theme-elegant .ns-container:hover {
-  background-color: #f8f8f8;
+.ns-theme-elegant .ns-container:hover,
+.ns-theme-elegant .ns-focused {
+  background-color: #ededed;
   border-color: #e8e8e8;
   box-shadow: 0px 1px 1px #f8f8f8, 1px 0px 1px #f8f8f8, -1px 0px 1px #f8f8f8;
 }

@@ -9,6 +9,13 @@
     .ns-month {
       min-width: 5em;
     }
+    .ns-container label {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px; width: 1px;
+      margin: -1px; padding: 0; border: 0;
+    }
   </style>
 </head>
 <body>
@@ -80,6 +87,8 @@
   </section><!--/#main-->
 
   <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="normalized-select.js"></script>
+
   <script>
     /**
      * You can use the following snippet to remove the blue highlight on <select>s in IE.
@@ -87,14 +96,13 @@
      * if you do this, and this can affect accessibility e.g. keyboard selection becomes
      * impossible.
      *
-     * If you still want to to do this, just include jQuery (uncomment the above <script>) and
-     * uncomment the following lines.
+     * If you still want to to do this, just include jQuery and uncomment the following lines.
      */
-    $(function () {
-      $('select').change(function () {
-        $(this).blur();
-      });
-    }());
+    // $(function () {
+    //   $('select').change(function () {
+    //     $(this).blur();
+    //   });
+    // });
   </script>
 </body>
 </html>

@@ -7,18 +7,10 @@
   padding: 0.3em 1.4em 0.3em 0.5em;
   margin-left: 0.5em;
   background-color: #eee;
+  border: 2px solid transparent;
 }
 .ns-container:first-child,
-.ns-container-first
- { margin-left: 0; }
-
-.ns-container label {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
-}
+.ns-container-first { margin-left: 0; }
 
 .ns-select {
   position: absolute;
@@ -35,7 +27,6 @@
   border-radius: 0;
   -webkit-appearance: none;
 }
-.ns-select:focus { outline: none; }
 
 .ns-icon {
   position: absolute;
@@ -43,3 +34,8 @@
   top: 0.3em;
   right: 0.4em;
 }
+
+.ns-select:focus { outline: none; }
+.ns-focused { border-color: #106ACA; }
+.ns-focused .ns-select,
+.ns-focused .ns-icon   { color: #106ACA;}

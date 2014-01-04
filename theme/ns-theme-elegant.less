@@ -1,5 +1,6 @@
-@containerBg:       darken(#fff, 2%);
-@selectColor:       #0299C4;
+@containerBg:             darken(#fff, 2%);
+@containerShadowColor:    darken(@containerBg, 0.75%);
+@selectColor:             #0299C4;
 
 .ns-theme-elegant {
   .ns-container {
@@ -8,12 +9,13 @@
     border-radius: 2px;
     border: 1px solid darken(@containerBg, 5%);
   }
-  .ns-container:hover {
-    background-color: darken(@containerBg, 0.75%);
+  .ns-container:hover,
+  .ns-focused {
+    background-color: darken(@containerBg, 5%);
     border-color: darken(@containerBg, 7%);
-    box-shadow: 0px 1px 1px darken(@containerBg, 0.75%),
-                1px 0px 1px darken(@containerBg, 0.75%),
-               -1px 0px 1px darken(@containerBg, 0.75%);
+    box-shadow: 0px 1px 1px @containerShadowColor,
+                1px 0px 1px @containerShadowColor,
+               -1px 0px 1px @containerShadowColor;
   }
 
   .ns-select {
