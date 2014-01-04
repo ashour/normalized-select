@@ -1,41 +1,32 @@
 .ns-container {
   display: inline-block;
   position: relative;
+  vertical-align: middle;
   overflow: hidden;
-  min-width: 4em;
-  min-height: 1em;
-  padding: 0.3em 1.4em 0.3em 0.5em;
-  margin-left: 0.5em;
-  background-color: #eee;
-  border: 2px solid transparent;
+  min-width: 3em;
+  min-height: 1.5em;
+  margin-left: 0.25em;
+  margin-top: -0.2em;
+  border-right: 0.2em solid #eee;
+  background: #eee url('icon.png') right center no-repeat;
 }
 .ns-container:first-child,
 .ns-container-first { margin-left: 0; }
 
 .ns-select {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0.5em;
-  width: 200%;
-  height: 100%;
+  width: 200%; /* Hide the select's dropdown arrow in some browsers */
+  height: 200%; /* Ensure is clickable in the container */
+  margin: 0.2em 0.25em 0.2em 0.35em;
   padding: 0;
-  font: 1em/1em "Times New Roman", serif;
+  font-family: inherit; /* Fix for some browsers that don't inherit this */
+  font-size: 100%;      /* Fix for some browsers that don't inherit this */
   background-color: transparent;
-  cursor: pointer;
   border: 0;
   border-radius: 0;
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* Get rid of webkit styling */
 }
 
-.ns-icon {
-  position: absolute;
-  z-index: 1;
-  top: 0.3em;
-  right: 0.4em;
-}
-
-.ns-select:focus { outline: none; }
-.ns-focused { border-color: #106ACA; }
-.ns-focused .ns-select,
-.ns-focused .ns-icon   { color: #106ACA;}
+/* Remove default browser focus outline for some browsers, and add our own styling
+   to the contaier. Note that the .ns-focused class is toggled on focus/blur using JS. */
+.ns-select:focus       { outline: none; }
+.ns-focused .ns-select { color: #106ACA;}

@@ -6,25 +6,18 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="normalized-select.css">
   <style>
-    .ns-month {
-      min-width: 5em;
-    }
-    .ns-container label {
-      position: absolute;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      height: 1px; width: 1px;
-      margin: -1px; padding: 0; border: 0;
-    }
+    .ns-day   { width: 3.3em; }
+    .ns-month { width: 6em; }
+    label       { margin-left: 1em; }
+    label.first { margin-left: 0;}
   </style>
 </head>
 <body>
   <section rel="main" id="main">
       <h1>Normalized &lt;select&gt; Dropdown</h1>
 
-      <div class="ns-container">
-        <label for="day">Day</label>
-
+      <label for="day" class="first">Day</label>
+      <div class="ns-container ns-day">
         <select class="ns-select" name="day" id="day">
           <option value="">Day</option>
           <option value="1">1</option>
@@ -59,13 +52,10 @@
           <option value="30">30</option>
           <option value="31">31</option>
         </select>
-
-        <i class="fa fa-chevron-down ns-icon"></i>
       </div>
 
+      <label for="month">Month</label>
       <div class="ns-container ns-month">
-        <label for="month">Month</label>
-
         <select class="ns-select" name="month" id="month">
           <option value="">Month</option>
           <option value="1">January</option>
@@ -81,8 +71,6 @@
           <option value="11">November</option>
           <option value="12">December</option>
         </select>
-
-        <i class="fa fa-chevron-down ns-icon"></i>
       </div>
   </section><!--/#main-->
 
